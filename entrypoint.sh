@@ -9,7 +9,6 @@ done
 
 echo "PostgreSQL is ready!"
 
-
 # Apply database migrations
 python manage.py makemigrations --noinput
 

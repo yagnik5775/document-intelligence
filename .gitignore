@@ -1,0 +1,99 @@
+.env
+ 
+# Ignore migrations except for the __init__.py files
+**/migrations/*
+!**/migrations/__init__.py
+ 
+# Ignore __pycache__ folders
+**/__pycache__/*
+ 
+
+ 
+# Ignore local settings
+local_settings.py
+
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore virtual environment
+env/
+env
+# Ignore uploads folder
+uploads/
+
+venv/
+
+.env/
+
+*.dll
+*.lib
+
+llama-env/
+document_intelligence/llama-env/
+
+# # =========================
+# # Python cache / bytecode
+# # =========================
+# __pycache__/
+# *.py[cod]
+# *$py.class
+
+# # =========================
+# # Environment & Virtualenvs
+# # =========================
+# .env
+# .env.*
+# env/
+# venv/
+# ENV/
+# VENV/
+# llama-env/
+# document_intelligence/llama-env/
+
+# # =========================
+# # Django migrations
+# # (ignore all except __init__.py)
+# # =========================
+# */migrations/*
+# !*/migrations/__init__.py
+
+# # =========================
+# # Databases
+# # =========================
+# *.sqlite3
+
+# # =========================
+# # Logs
+# # =========================
+# *.log
+# debug.log
+# debug/
+
+# # =========================
+# # Editors / IDEs
+# # =========================
+# .vscode/
+# .idea/
+# *.swp
+
+# # =========================
+# # OS generated files
+# # =========================
+# .DS_Store
+# Thumbs.db
+# desktop.ini
+
+# # =========================
+# # Packaging / Build
+# # =========================
+# build/
+# dist/
+# *.egg-info/
+# *.egg
+
+# # =========================
+# # FAISS index files (optional)
+# # =========================
+# *.faiss
+# faiss_index.faiss

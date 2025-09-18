@@ -15,14 +15,14 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt --verbose
+RUN pip install --no-cache-dir -r requirements.txt 
 
 # Copy app files
 COPY . .
 
 # Add entrypoint script
 COPY entrypoint.sh .
-RUN chmod +x entrypoint.sh
+RUN chmod +x entrypoint.sh-
 
 # Set environment variables
 ENV DJANGO_SETTINGS_MODULE=document_intelligence.settings \

@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 # Load the FAISS index and metadata
 
-vector_folder = 'Y:/YBAI/Document_AI/document_intelligence/document_processing/vector_store'  # Replace with your vector store path
+vector_folder = "/app/document_processing/vector_store"
 faiss_index = faiss.read_index(f"{vector_folder}/faiss_index.faiss")
 with open(f"{vector_folder}/chunk_metadata.json", "r", encoding="utf-8") as f:
     chunk_metadata = json.load(f)

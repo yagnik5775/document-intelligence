@@ -22,7 +22,8 @@ COPY . .
 
 # Add entrypoint script
 COPY entrypoint.sh .
-RUN chmod +x entrypoint.sh-
+RUN chmod +x entrypoint.sh
+
 
 # Set environment variables
 ENV DJANGO_SETTINGS_MODULE=document_intelligence.settings \

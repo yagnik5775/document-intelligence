@@ -157,3 +157,6 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY', '')
 STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_WEBHOOK_SECRET', '')
 
 DOMAIN = 'http://127.0.0.1:8000'
+
+
+BASE_URL = "http://yagnik-intern.ybaisolution.com/"

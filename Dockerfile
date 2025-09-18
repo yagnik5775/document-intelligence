@@ -14,16 +14,15 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-COPY requirements.txt .
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt 
 
-# Copy app files
+# Copy app files including vector_store
 COPY . .
 
 # Add entrypoint script
-COPY entrypoint.sh .
+COPY entrypoint.sh . 
 RUN chmod +x entrypoint.sh
-
 
 # Set environment variables
 ENV DJANGO_SETTINGS_MODULE=document_intelligence.settings \

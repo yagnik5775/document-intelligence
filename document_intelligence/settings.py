@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'document_intelligence.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'document_db'),
+        'NAME': os.environ.get('DB_NAME', 'doc_db'),
         'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'patelyash1234'),
+        'HOST': os.environ.get('DB_HOST', '69.62.78.167'),
         'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }

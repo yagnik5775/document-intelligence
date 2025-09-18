@@ -4,6 +4,8 @@ import os
 import sys
 
 
+print("hello world")
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'document_intelligence.settings')

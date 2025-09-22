@@ -11,7 +11,6 @@ echo "PostgreSQL is ready!"
 
 # Apply database migrations
 python manage.py makemigrations --noinput
-
 python manage.py migrate --noinput
 echo "Migrations applied!"
 
@@ -21,6 +20,7 @@ python manage.py collectstatic --noinput
 # Start Gunicorn server
 exec gunicorn document_intelligence.wsgi:application \
     --bind 0.0.0.0:8003 \
-    --workers 2 \
+    --workers 1 \
+    --worker-class gthread \
+    --threads 2 \
     --timeout 120
-

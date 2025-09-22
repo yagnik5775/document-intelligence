@@ -32,12 +32,19 @@ logger = logging.getLogger(__name__)
 
 
 
-# Load the FAISS index and metadata
+# Load the FAISS index and metadata/
 
-vector_folder = "/app/document_processing/vector_store"
+vector_folder = r"Y:\YBAI\Document_AI\document_intelligence\document_processing\vector_store"
 faiss_index = faiss.read_index(f"{vector_folder}/faiss_index.faiss")
+
 with open(f"{vector_folder}/chunk_metadata.json", "r", encoding="utf-8") as f:
     chunk_metadata = json.load(f)
+
+
+# vector_folder = "/app/document_processing/vector_store"
+# faiss_index = faiss.read_index(f"{vector_folder}/faiss_index.faiss")
+# with open(f"{vector_folder}/chunk_metadata.json", "r", encoding="utf-8") as f:
+#     chunk_metadata = json.load(f)
 
 # Load the SentenceTransformer model
 model = SentenceTransformer("all-MiniLM-L6-v2")

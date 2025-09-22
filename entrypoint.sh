@@ -19,4 +19,8 @@ echo "Migrations applied!"
 python manage.py collectstatic --noinput
 
 # Start Gunicorn server
-exec gunicorn document_intelligence.wsgi:application --bind 0.0.0.0:8003 --workers 3
+exec gunicorn document_intelligence.wsgi:application \
+    --bind 0.0.0.0:8003 \
+    --workers 2 \
+    --timeout 120
+

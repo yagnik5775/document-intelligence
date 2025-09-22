@@ -14,7 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import login, authenticate, logout
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
-import grok_client
+import groq
 from PyPDF2 import PdfReader
 from .forms import PDFUploadForm
 from .models import Document, AnalysisResult, UploadedPDF, CustomUser
@@ -81,7 +81,7 @@ def query_view(request):
 
 
 # Initialize SentenceTransformer and OpenAI client
-grok_client_instance = grok_client.Client(api_key=settings.GROK_API_KEY)
+grok_client = groq.Client(api_key=settings.GROK_API_KEY)
 
 def home(request):
     return render(request, 'home.html')
